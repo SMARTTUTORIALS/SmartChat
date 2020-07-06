@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Smart Chat</string>
+    <string name="tab_chats_text">CHATS</string>
+    <string name="tab_status_text">STATUS</string>
+    <string name="tab_calls_text">CALLS</string>
+    <string name="opens_system_camera">Opens System Camera</string>
+    <string name="last_message">last message</string>
+    <string name="user_name">User Name</string>
+    <string name="sample_time">12:20 AM</string>
+    <string name="new_group_menu_item_text">New Group</string>
+    <string name="new_broadcast_menu_item_text">New Broadcast</string>
+    <string name="smart_chat_web_menu_item_text">Smart Chat Web</string>
+    <string name="starred_messages_menu_item_text">Starred Messages</string>
+    <string name="settings_menu_item_text">Settings</string>
+    <string name="status_privacy_menu_item_text">Status Privacy</string>
+    <string name="clear_call_logs_menu_item_text">Clear Call Logs</string>
+</resources>

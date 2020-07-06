@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemClearCallLogs"
+        android:title="@string/clear_call_logs_menu_item_text" />
+    <item
+        android:id="@+id/itemSettings"
+        android:title="@string/settings_menu_item_text" />
+</menu>
