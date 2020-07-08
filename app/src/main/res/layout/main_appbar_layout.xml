@@ -14,7 +14,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
-        app:title="@string/app_name"
         app:titleTextAppearance="@style/ToolbarTitle"
         app:titleTextColor="@color/colorWhite" />
 
