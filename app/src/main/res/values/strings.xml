@@ -14,4 +14,6 @@
     <string name="settings_menu_item_text">Settings</string>
     <string name="status_privacy_menu_item_text">Status Privacy</string>
     <string name="clear_call_logs_menu_item_text">Clear Call Logs</string>
+    <string name="tab_groups_text">GROUPS</string>
+
 </resources>

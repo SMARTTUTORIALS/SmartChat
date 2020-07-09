@@ -1,17 +1,25 @@
 package com.smartechnologies.smartchat.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.google.android.material.tabs.TabItem
+import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import com.smartechnologies.smartchat.R
+import com.smartechnologies.smartchat.adapters.TabItemAcessAdapter
+import com.smartechnologies.smartchat.fragments.CallsFragment
+import com.smartechnologies.smartchat.fragments.ChatsFragment
+import com.smartechnologies.smartchat.fragments.GroupsFragment
+import com.smartechnologies.smartchat.fragments.StatusFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainAppToolbar : Toolbar
-    private lateinit var chatsTabItem : TabItem
-    private lateinit var statusTabItem: TabItem
-    private lateinit var callsTabItem: TabItem
+    private lateinit var mainAppToolbar: Toolbar
+    private lateinit var mainViewPager: ViewPager
+    private lateinit var mainTabLayout: TabLayout
+    private lateinit var openSysCam: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,12 +27,22 @@ class MainActivity : AppCompatActivity() {
 
         mainAppToolbar = findViewById(R.id.appMainToolBar)
         setSupportActionBar(mainAppToolbar)
-        supportActionBar?.title="Smart Chat"
+        supportActionBar?.title = "Smart Chat"
 
-        chatsTabItem = findViewById(R.id.tabItemChats)
-        statusTabItem = findViewById(R.id.tabItemStatus)
-        callsTabItem =findViewById(R.id.tabItemCalls)
+        openSysCam = findViewById(R.id.imgOpenSystemCamera)
+        mainTabLayout = findViewById(R.id.mainTabLayout)
+        mainViewPager = findViewById(R.id.viewPagerFragmentHolder)
 
+        val viewPagerAdapter =
+            TabItemAcessAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+
+        viewPagerAdapter.addFragments(ChatsFragment(), "CHATS")
+        viewPagerAdapter.addFragments(GroupsFragment(), "GROUPS")
+        viewPagerAdapter.addFragments(StatusFragment(), "STATUS")
+        viewPagerAdapter.addFragments(CallsFragment(), "CALLS")
+
+        mainViewPager.adapter = viewPagerAdapter
+        mainTabLayout.setupWithViewPager(mainViewPager)
 
     }
 }

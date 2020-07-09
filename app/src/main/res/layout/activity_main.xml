@@ -1,88 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:id="@+id/appBarCoordinatorLayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-
-        android:id="@+id/appBarCoordinatorLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-            <include layout="@layout/main_appbar_layout" />
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <include
-        layout="@layout/main_activity_tab_bar_layout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appBarCoordinatorLayout" />
-
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/layoutTabBarHolder"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <ScrollView
-            android:id="@+id/sampleScrollContent"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appMainToolBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|snap"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:titleTextColor="@color/colorWhite" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <!--The following are samples will be replaced by recycler view-->
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
 
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
+        <include layout="@layout/main_activity_tab_bar_layout" />
 
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-                <include layout="@layout/chats_fragment_recycler_singlerow" />
-
-            </LinearLayout>
-        </ScrollView>
-    </FrameLayout>
-</RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerFragmentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarCoordinatorLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
