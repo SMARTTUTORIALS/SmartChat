@@ -29,7 +29,7 @@
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
@@ -51,7 +51,7 @@
             android:layout_marginTop="20dp"
             android:cursorVisible="true"
             android:drawableStart="@drawable/ic_email"
-            android:hint="    Email ID"
+            android:hint="@string/email_id"
             android:inputType="textEmailAddress"
             android:textColor="@color/colorBlue"
             android:textColorHint="@color/colorAccent" />
@@ -64,11 +64,35 @@
             android:layout_marginTop="20dp"
             android:cursorVisible="true"
             android:drawableStart="@drawable/ic_lock"
-            android:hint="    Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:textColor="@color/colorBlue"
             android:textColorHint="@color/colorAccent" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtCreateNewAccount"
+        android:layout_above="@+id/txtForgotPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_to_smartchat_create_new_account_here"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlue"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_above="@+id/btnSignInUser"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password_click_to_recover"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlue"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/btnSignInUser"
@@ -78,7 +102,7 @@
         android:layout_centerInParent="true"
         android:layout_margin="10dp"
         android:background="@drawable/button_shape_rounded"
-        android:text="SIGN IN"
+        android:text="@string/sign_in_btn_text"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:textStyle="bold" />

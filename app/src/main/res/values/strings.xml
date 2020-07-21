@@ -5,7 +5,7 @@
     <string name="tab_calls_text">CALLS</string>
     <string name="opens_system_camera">Opens System Camera</string>
     <string name="last_message">last message</string>
-    <string name="user_name">User Name</string>
+    <string name="user_name">\tUser Name</string>
     <string name="sample_time">12:20 AM</string>
     <string name="new_group_menu_item_text">New Group</string>
     <string name="new_broadcast_menu_item_text">New Broadcast</string>
@@ -16,5 +16,13 @@
     <string name="clear_call_logs_menu_item_text">Clear Call Logs</string>
     <string name="tab_groups_text">GROUPS</string>
     <string name="create_new_user_account"><u>Create New User Account</u></string>
+    <string name="forgot_password_click_to_recover">Forgot Password? Click to Recover</string>
+    <string name="new_to_smartchat_create_new_account_here">New To SmartChat? Create New Account Here</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_btn_text">SIGN IN</string>
+    <string name="email_id">\tEmail ID</string>
+    <string name="phone_number">\tPhone Number</string>
+    <string name="password">\tPassword</string>
+    <string name="create_user_btn_text">CREATE USER</string>
 
 </resources>
