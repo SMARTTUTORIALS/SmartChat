@@ -10,7 +10,7 @@ class TabItemAcessAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAda
     private val titles = ArrayList<String>()
 
     override fun getItem(position: Int): Fragment {
-        return fragments.get(position)
+        return fragments[position]
     }
 
 
@@ -24,6 +24,6 @@ class TabItemAcessAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAda
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return titles.get(position)
+        return titles[position]
     }
 }

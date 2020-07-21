@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignInActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/SignInToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|snap"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:titleTextColor="@color/colorWhite" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <EditText
+            android:id="@+id/etUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="    Email ID"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorBlue"
+            android:textColorHint="@color/colorAccent" />
+
+        <EditText
+
+            android:id="@+id/etUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="    Password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorBlue"
+            android:textColorHint="@color/colorAccent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignInUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shape_rounded"
+        android:text="SIGN IN"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>
