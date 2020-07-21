@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -16,6 +17,8 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var emailid: EditText
     private lateinit var toolbar: Toolbar
     private lateinit var signInButton: Button
+    private lateinit var forgotPassword: TextView
+    private lateinit var createNewAcc: TextView
 
     private lateinit var authenticator: FirebaseAuth
 
@@ -27,11 +30,12 @@ class SignInActivity : AppCompatActivity() {
         password = findViewById(R.id.etUserPassword)
         emailid = findViewById(R.id.etUserEmail)
 
+        forgotPassword = findViewById(R.id.txtForgotPassword)
+        createNewAcc = findViewById(R.id.txtCreateNewAccount)
+
         toolbar = findViewById(R.id.SignInToolBar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Sign In"
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         authenticator = FirebaseAuth.getInstance()
 
@@ -59,6 +63,17 @@ class SignInActivity : AppCompatActivity() {
                         }
                     }
             }
+        }
+
+        createNewAcc.setOnClickListener {
+            val intent = Intent(this@SignInActivity, RegistrationActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        forgotPassword.setOnClickListener {
+            Toast.makeText(this@SignInActivity, "Feature under Development!", Toast.LENGTH_LONG)
+                .show()
         }
     }
 }

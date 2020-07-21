@@ -73,7 +73,7 @@
     <TextView
         android:id="@+id/txtCreateNewAccount"
         android:layout_above="@+id/txtForgotPassword"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/new_to_smartchat_create_new_account_here"

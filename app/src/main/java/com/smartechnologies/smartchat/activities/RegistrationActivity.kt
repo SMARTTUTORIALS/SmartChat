@@ -2,6 +2,7 @@ package com.smartechnologies.smartchat.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -77,7 +78,7 @@ class RegistrationActivity : AppCompatActivity() {
         password: String,
         userContact: String
     ) {
-        authenticator.createUserWithEmailAndPassword(username, password).addOnCompleteListener {
+        authenticator.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful) {
                 val firebaseUser = authenticator.currentUser
                 val userId: String = firebaseUser!!.uid
@@ -109,4 +110,12 @@ class RegistrationActivity : AppCompatActivity() {
 
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+        }
+        return true
+    }
+
 }

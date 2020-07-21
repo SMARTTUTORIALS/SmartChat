@@ -16,8 +16,8 @@
     <string name="clear_call_logs_menu_item_text">Clear Call Logs</string>
     <string name="tab_groups_text">GROUPS</string>
     <string name="create_new_user_account"><u>Create New User Account</u></string>
-    <string name="forgot_password_click_to_recover">Forgot Password? Click to Recover</string>
-    <string name="new_to_smartchat_create_new_account_here">New To SmartChat? Create New Account Here</string>
+    <string name="forgot_password_click_to_recover"><u>Forgot Password? Click to Recover</u></string>
+    <string name="new_to_smartchat_create_new_account_here"><u>New To SmartChat? Create New Account Here</u></string>
     <string name="sign_in">Sign In</string>
     <string name="sign_in_btn_text">SIGN IN</string>
     <string name="email_id">\tEmail ID</string>
