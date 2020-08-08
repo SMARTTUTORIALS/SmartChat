@@ -1,4 +1,3 @@
 # SmartChat
-WhatsApp Clone with Custom Modifications
-
+A Simple social media Chatting App
 This App Is currently under Dev. 
