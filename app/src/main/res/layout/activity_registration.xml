@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activities.RegistrationActivity">
 
+    <include layout="@layout/progress_bar_layout" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -41,55 +43,78 @@
             android:textSize="25sp"
             android:textStyle="bold|italic" />
 
-        <EditText
-            android:id="@+id/etUserName"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_user"
-            android:hint="@string/user_name"
-            android:inputType="text"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_marginTop="50dp">
 
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_user_custom"
+                android:hint="@string/user_name"
+                android:inputType="text"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/etUserEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_email"
-            android:hint="@string/email_id"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_marginTop="10dp">
 
-        <EditText
-            android:id="@+id/etUserPhone"
+            <EditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_email_custom"
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_phone"
-            android:hint="@string/phone_number"
-            android:inputType="phone"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_marginTop="10dp">
 
-        <EditText
+            <EditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_phone_custom"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            android:id="@+id/etUserPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_lock"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_marginTop="10dp">
+
+            <EditText
+
+                android:id="@+id/etUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_lock_custom"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <Button
@@ -104,4 +129,6 @@
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+
 </RelativeLayout>

@@ -6,7 +6,14 @@
         <item name="colorPrimaryDark">#008869</item>
         <item name="colorAccent">#008869</item>
     </style>
+
     <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ProgressBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#DD2C00</item>
+        <item name="android:textColor">#DD2C00</item>
+        <item name="android:textSize">22sp</item>
     </style>
 </resources>

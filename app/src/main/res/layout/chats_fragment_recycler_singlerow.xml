@@ -1,94 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/singleRowLayoutContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-    <!--The following relative layout code is to create circular image view-->
-    <RelativeLayout
-        android:id="@+id/profileImageHolder"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:padding="7dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            app:cardCornerRadius="30dp">
-
-            <ImageView
-                android:id="@+id/imgRoundedProfileImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-    <!--The following is to hold text related details-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="2">
-        <!--The following relative layout is not useless its used for layout positioning-->
+        android:layout_height="wrap_content">
+        <!--The following relative layout code is to create circular image view-->
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:id="@+id/profileImageHolder"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="7dp">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/imgOtherUserRoundedProfileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <!--The following is to hold text related details-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <!--The following relative layout is not useless its used for layout positioning-->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:orientation="horizontal"
-                android:weightSum="5"
-                tools:ignore="UselessParent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/txtOtherUserName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:padding="2dp"
+                        android:text="@string/user_name"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLastMessageTimeStamp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:text="@string/sample_time"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:id="@+id/txtLastChatMessage"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableStart="@drawable/ic_message_read"
                     android:padding="2dp"
-                    android:text="@string/user_name"
+                    android:text="@string/last_message"
+                    android:textAlignment="textStart"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="2dp"
-                    android:text="@string/sample_time"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textSize="12sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:drawableStart="@drawable/ic_message_read"
-                android:padding="2dp"
-                android:text="@string/last_message"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

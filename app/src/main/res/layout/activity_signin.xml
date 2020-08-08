@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activities.SignInActivity">
 
+    <include layout="@layout/progress_bar_layout" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -25,10 +27,10 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:layout_below="@+id/toolbar"
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
         android:text="@string/sign_in"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
@@ -43,39 +45,50 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-
-        <EditText
-            android:id="@+id/etUserEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_email"
-            android:hint="@string/email_id"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_email_custom"
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            android:id="@+id/etUserPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_lock"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColor="@color/colorBlue"
-            android:textColorHint="@color/colorAccent" />
+            android:layout_height="wrap_content">
+
+            <EditText
+
+                android:id="@+id/etUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:cursorVisible="true"
+                android:drawableStart="@drawable/ic_lock_custom"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorBlue"
+                android:textColorHint="@color/colorAccent" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/txtCreateNewAccount"
-        android:layout_above="@+id/txtForgotPassword"
-        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/txtForgotPassword"
+        android:layout_marginBottom="20dp"
         android:text="@string/new_to_smartchat_create_new_account_here"
         android:textAlignment="center"
         android:textColor="@color/colorBlue"
@@ -84,10 +97,10 @@
 
     <TextView
         android:id="@+id/txtForgotPassword"
-        android:layout_above="@+id/btnSignInUser"
-        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSignInUser"
+        android:layout_marginBottom="30dp"
         android:text="@string/forgot_password_click_to_recover"
         android:textAlignment="center"
         android:textColor="@color/colorBlue"

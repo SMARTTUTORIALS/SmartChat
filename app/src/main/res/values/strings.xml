@@ -25,4 +25,16 @@
     <string name="password">\tPassword</string>
     <string name="create_user_btn_text">CREATE USER</string>
 
+    <string name="pref_file_name">user_preferences</string>
+
+    <string name="passwordCriteria">
+        Password should contain
+        \n1. At least 6 Characters Long
+        \n2. Lowercase &amp; Uppercase Letters
+        \n3. Numbers &amp; Special Characters
+    </string>
+    <string name="last_active_status">Last Seen at 12:00 PM</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="sample_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
 </resources>

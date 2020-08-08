@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/itemNewGroup"
-        android:title="@string/new_group_menu_item_text" />
+        android:title="@string/new_group_menu_item_text"
+        app:showAsAction="never" />
     <item
         android:id="@+id/itemNewBroadcast"
-        android:title="@string/new_broadcast_menu_item_text" />
+        android:title="@string/new_broadcast_menu_item_text"
+        app:showAsAction="never" />
     <item
         android:id="@+id/itemSmartChatWeb"
-        android:title="@string/smart_chat_web_menu_item_text" />
+        android:title="@string/smart_chat_web_menu_item_text"
+        app:showAsAction="never" />
     <item
         android:id="@+id/itemStarredMessages"
-        android:title="@string/starred_messages_menu_item_text" />
+        android:title="@string/starred_messages_menu_item_text"
+        app:showAsAction="never" />
     <item
         android:id="@+id/itemSettings"
-        android:title="@string/settings_menu_item_text" />
+        android:title="@string/settings_menu_item_text"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemLogOut"
+        android:title="Log out"
+        app:showAsAction="never" />
 </menu>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MessageActivity">
+
+    <!--App Bar Design Code Below-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/messageToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextColor="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="2dp">
+                <!--The following relative layout code is to create circular image view-->
+                <RelativeLayout
+                    android:id="@+id/profileImageHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/customHomeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/customHomeButton"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:id="@+id/imgToolbarUserProfileImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_launcher" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <!--The following is to hold text related details-->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/txtToolbarUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/user_name"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLastSeenTimeStamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/last_active_status"
+                        android:textAllCaps="false"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--App Bar Design Code Above-->
+
+    <!--Main Layout Design Code Below-->
+    <RelativeLayout
+        android:id="@+id/chatWindowContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarContainer">
+
+        <RelativeLayout
+            android:id="@+id/chatsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/allMessageInputsHolder"
+            android:layout_marginBottom="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/allMessageInputsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/messageInputHolder"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toStartOf="@+id/imgAddVoiceNoteOrSendMessage"
+                android:background="@drawable/edit_text_shape"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgOpenEmoticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_open_emoticon" />
+
+                <EditText
+                    android:id="@+id/etMessageInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:alpha="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_toStartOf="@+id/imgAddAttachments"
+                    android:layout_toEndOf="@+id/imgOpenEmoticon"
+                    android:background="@color/colorTransparent"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    android:hint="@string/type_a_message"
+                    android:textColor="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/imgAddAttachments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_toStartOf="@+id/imgAddImages"
+                    android:src="@drawable/ic_attachments" />
+
+                <ImageView
+                    android:id="@+id/imgAddImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_camera_dark" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgAddVoiceNoteOrSendMessage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_shape_rounded"
+                android:padding="10dp"
+                android:src="@drawable/ic_mic" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

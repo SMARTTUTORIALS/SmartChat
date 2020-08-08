@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtChatMessageContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="2dp">
+
+        <TextView
+            android:id="@+id/txtChatMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:alpha="1"
+            android:background="@drawable/message_background_right"
+            android:maxWidth="300dp"
+            android:minWidth="100dp"
+            android:minHeight="30dp"
+            android:padding="10dp"
+            android:text="@string/sample_text"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtMessageTimeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtChatMessage"
+            android:layout_alignEnd="@+id/txtChatMessage"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/message_timestamp_background_right"
+            android:padding="2dp"
+            android:text="@string/sample_time"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
